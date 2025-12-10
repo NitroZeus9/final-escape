@@ -158,7 +158,7 @@ function showHint(portal) {
       <p class="tk-line1">Seeker… numbers circle this room.</p>
       <p class="tk-line1">Their dots reveal their place in a four-part lock.</p>
       <p class="tk-line1">The right chest holds the numbers you need.</p>
-      <p class="tk-line1">The left chest holds a riddle—I shine in firelight,I rest at a warrior's side,I bite without teeth, what am i?,</p>
+      <p class="tk-line1">The left chest holds a riddle—I rest at a warrior's side,I bite without teeth, what am i?,</p>
       <p class="tk-line1">and a scroll nearby will help you decode it.</p>
       <p class="tk-line1">Claim what lies within. Only then may you leave my chamber.</p>
        
@@ -217,3 +217,4 @@ function checkAllPortalsComplete() {
     updatePortalStatus();
   }
 }
+
