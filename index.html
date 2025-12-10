@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link the CSS file -->
+    <link rel="stylesheet" href="Menu_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+  </head>
+  <body>
+    <!-- TOP ROW -->
+    <div class="top-row">
+      <div class="smol-box-orion"></div>
+    
+      <div class="box">
+        <div class="contain-image center-content">
+          <img src="images/2-removebg-preview.png" />
+        </div>
+      </div>
+      </div>
+
+    </div>
+    
+    <!-- NOTE MODAL (modal2) -->
+    <div class="modal2 center-content" id="myModal2">
+      <span class="close" onclick="modalClose2()">&times;</span>
+    
+      <div class="modal-body2">
+        <div class="note-text">
+          <p class="tk-line">
+            Seeker… If you’ve found this note, your trial has begun.
+            Throughout this chamber you will see numbers marked with dots.
+    
+            The dots reveal each number’s position in a four-digit lock.
+            Discover them to open the chest on the right.
+    
+            Within the other chest, you will encounter a riddle.
+            Its meaning is obscured, but a scroll hidden in the room
+            contains the method to decipher it.
+    
+            Use the scroll. Decode the riddle.
+            Now go, and beware of the monster’s wrath.
+
+
+            ALWAYS REMEMBER THE MENU I LEFT FOR YOU HAS THE HINTS NEEDED TO BANISH THE MONSTER
+
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SCROLL MODAL (modal3) -->
+    <div class="modal3 center-content" id="myModal3">
+      <span class="close" onclick="modalClose3()">&times;</span>
+    
+      <div class="modal-body3">
+        <div class="center-content">
+          <img src="images/answer_key.png" id="Scroll" />
+        </div>
+    
+        <div class="riddle-text">
+          <div class="riddletop center-content">
+            <p class="tk-line">
+              ᛁ Sᚺᛁᚾᛖ ᛁᚾ ᚠᛁᚱᛖᛚᛁᚷᚺᛏ,
+              ᛁ ᚱᛖSᛏ ᚨᛏ ᚨ ᚹᚨᚱᚱᛁᛟᚱ'S Sᛁᛞᛖ,
+              ᛁ ᛒᛁᛏᛖ ᚹᛁᛏᚺᛟᚢᛏ ᛏᛖᛖᛏᚺ.
+              ᚹᚺᚨᛏ ᚨᛗ ᛁ?
+            </p>
+          </div>
+    
+          <div class="riddlebottom center-content">
+            <input type="text" autocomplete="off" id="answer1" />
+            <button id="SUBMIT" class="clickable1" onclick="showReward1()">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- LOCK MODAL (modal4) -->
+    <div class="modal4" id="myModal4">
+      <span class="close" onclick="modalClose4()">&times;</span>
+    
+      <div class="modal-body4">
+        <div class="half color-1">
+          <div class="modal4top black center-content">
+            <img src="images/lock_11 (2).png" />
+          </div>
+    
+          <div class="modal4bottom black center-content">
+            <div class="box2"></div>
+            <div class="box2"></div>
+    
+            <div class="smol-box-orion2"><input type="text" autocomplete="off" maxlength="1" id="answer2" /></div>
+            <div class="smol-box-orion2"><input type="text" autocomplete="off" maxlength="1" id="answer3" /></div>
+            <div class="smol-box-orion2"><input type="text" autocomplete="off" maxlength="1" id="answer4" /></div>
+            <div class="smol-box-orion2"><input type="text" autocomplete="off" maxlength="1" id="answer5" /></div>
+    
+            <div class="box2"></div>
+            <div class="box2"></div>
+          </div>
+        </div>
+    
+        <div class="half center-content">
+          <img src="images/key_1.png" class="clickable1" id="KEY" onclick="showReward2()" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- MIDDLE ROW -->
+    <div class="middle-row center-bottom">
+    
+      <div class="smol-box-orion"></div>
+    
+      <div class="smol-box2 center-left">
+        <img src="images/closed_chest.png" class="clickable1" id="chest" onclick="modalOpen3()" />
+      </div>
+    
+      <div class="smol-box-orion"></div>
+      <div class="smol-box-orion"></div>
+      <div class="smol-box-orion"></div>
+    
+      <div class="smol-box-orion2 contain-image center-bottom">
+        <img src="images/1-removebg-preview.png" />
+      </div>
+    
+      <div class="smol-box-orion2">
+        <div class="contain-image center-left">
+          <img src="images/4-removebg-preview.png" />
+        </div>
+      </div>
+    
+      <div class="box center-left">
+        <img src="images/chestclosed_right.png" class="clickable1 cant-see-me"  id="chest2" onclick="modalOpen4()" />
+      </div>
+    
+    </div>
+    
+    <!-- BOTTOM ROW -->
+    <div class="bottom-row center-left">
+      <div class="smol-box "><img id="inventory1" /></div>
+      <div class="smol-box "><img id="inventory2" /></div>
+      <div class="smol-box "><img id="inventory3" /></div>
+      <div class="smol-box  center-content"><img id="inventory4" /></div>
+      <div class="smol-box  center-content"><img id="inventory5" /></div>
+      <div class="smol-box "><img id="inventory6" /></div>
+    
+      <div class="box"></div>
+    
+      <div class="box">
+        <div class="contain-image center-bottom">
+          <img src="images/3-removebg-preview.png" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+    <script src="Menu_script.js"></script>
+    
+    <!-- NOTE BUTTON -->
+    <button id="note" onclick="modalOpen2()">NOTE</button>
+      </body>
+    </html>
+    
+
+    </div>
+    <script src="script.js"></script>
+    <script src="Menu_script.js"></script>
+    <button id="note" onclick="modalOpen2()">NOTE</button>
+
+    <!-- MENU MODAL -->
+<div class="menumodal center-content" id="menumodal">
+  <span class="close" onclick="hideModal()">&times;</span>
+
+  <div class="menumodal-body center-content">
+
+    <div id="menuPage" class="menu-page">
+      <h2 class="menu-title">⧖ TIME KEEPER CONSOLE</h2>
+      <button class="menu-btn" onclick="openNotes()">📜 Time Keeper’s Note</button>
+      <button class="menu-btn" onclick="openPortalStatus()">🌀 Portal Status</button>
+      <button class="menu-btn" onclick="openInventory()">🎒 Inventory</button>
+      <button class="menu-btn" onclick="openSettings()">⚙️ Settings</button>
+      <button class="menu-btn" onclick="openHelp()">❓ Help</button>
+      <p class="menu-footer">“Your human blood is the key.”</p>
+<p class="menu-footer tk-line timekeeper-textZ">
+            ALWAYS REMEMBER THE MENU I LEFT FOR YOU HAS THE HINTS NEEDED TO BANISH THE MONSTER
+          </p>
+    </div>
+
+    <div id="notesPage" class="menu-page hidden">
+      <button class="menu-btn" onclick="showHint(1)">Portal 1 Hint</button>
+      <button class="menu-btn" onclick="showHint(2)">Portal 2 Hint</button>
+      <button class="menu-btn" onclick="showHint(3)">Portal 3 Hint</button>
+      <button class="menu-btn" onclick="showHint(4)">Portal 4 Hint</button>
+      <button class="menu-btn locked" id="portal5Hint" disabled>Portal 5 Hint (Locked)</button>
+      <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+      <p id="hintText"></p>
+    </div>
+
+    <div id="statusPage" class="menu-page hidden">
+      <p id="portalStatus1">Portal 1: -</p>
+      <p id="portalStatus2">Portal 2: -</p>
+      <p id="portalStatus3">Portal 3: -</p>
+      <p id="portalStatus4">Portal 4: In Progress</p>
+      <p id="portalStatus5" class="locked">Portal 5: Not Ready</p>
+      <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+    </div>
+
+    <div id="inventoryPage" class="menu-page hidden">
+      <h2 class="menu-title">Inventory</h2>
+      <ul id="inventoryList"></ul>
+      <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+    </div>
+
+    <div id="helpPage" class="menu-page hidden">
+      <h2 class="menu-title red-alert">❗ HELP REQUESTED ❗</h2>
+      <p class="help-text">A signal has been sent...</p>
+      <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+    </div>
+  </div>
+</div>
+
+<button id="Menu" onclick="timeKeepersmenu()">MENU</button>
+<script src="Menu_script.js">
+</script>
+<link rel="stylesheet" href="Menu_style.css">
+<audio src="images/background_sound.mp3" id="sound"></audio>
+  </body>
+</html>
